@@ -1,0 +1,110 @@
+/*## Colors
+
+- White: hsl(0, 0%, 100%)
+- Light pink: hsl(275, 100%, 97%)
+- Grayish purple: hsl(292, 16%, 49%)
+- Dark purple: hsl(292, 42%, 14%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraphs): 16px
+
+### Font
+
+- Family: [Work Sans](https://fonts.google.com/specimen/Work+Sans)
+- Weights: 400, 600, 700
+
+font-family: "Work Sans", serif;
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", serif;
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+img{
+    display: block;
+}
+body{
+    background-color: hsl(275, 100%, 97%);
+}
+.invisible{
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+}
+
+header{
+    border: 1px solid black;
+    height: 315px;
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    border-radius: 15px;
+    width: 600px;
+    padding: 50px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: white;
+
+}
+#title{
+    display: flex;
+    align-items: center;
+}
+#title-name{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 32px;
+}
+#questions{
+    margin-top: 35px;
+}
+.question-item{
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+.question-item:not(:last-child){
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+}
+.the-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(292, 42%, 14%);
+    font-weight: 600;
+    cursor: pointer;
+}
+.the-question:hover{
+    color: hsl(292, 94%, 41%);
+}
+.the-answer{
+    color: hsl(292, 16%, 49%);
+    margin-top: 25px;
+    transition: height 400ms, opacity 400ms;
+}
+
+@media(max-width:768px){
+    main{
+        width: 90%;
+    }
+    .the-question{
+        font-size: 15px;
+    }
+    .the-answer{
+        font-size: 14px;
+    }
+}
